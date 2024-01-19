@@ -10,4 +10,4 @@ contract ChatterScript is Script {
         vm.startBroadcast();
         chat.sendMessage("hello hello");
     }
-}­
+}
