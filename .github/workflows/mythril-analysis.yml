@@ -1,0 +1,21 @@
+name: Mythril Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt update
+          sudo apt install software-properties-common
+          sudo add-apt-repository ppa:ethereum/ethereum
+          sudo apt install solc
+          sudo apt install libssl-dev python3-dev python3-pip
+          pip3 install mythril
+          myth version
