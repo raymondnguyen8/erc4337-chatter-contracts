@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.0;
 
 contract Chatter {
     event Message(address indexed sender, string message);
